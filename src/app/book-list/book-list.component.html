@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-4">
+        {{titlePage}}
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <button class="btn btn-primary" routerLink="/addBook">Thêm sách mới</button>
+    <table class="table">
+      <thead class="thread-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Handle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of bookList">
+        <th scope="row">{{ book.id }}</th>
+        <td><a [routerLink]="['/books',book.id]">{{ book.title }}</a></td>
+
+        <td>{{ book.author }}</td>
+        <td>
+          <button class="btn btn-danger mr-2" [routerLink]="['/deleteBook', book.id]">Delete</button>
+          <button class="btn btn-success" [routerLink]="['/editBook', book.id]">Edit</button>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+

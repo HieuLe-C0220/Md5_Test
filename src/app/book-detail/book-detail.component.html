@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-4">
+        {{titleDetail}}
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <button class="btn btn-secondary" routerLink="/">Xem danh sách</button>
+    <table class="table">
+      <tr>
+        <label class="font-weight-bold">Tên sách: </label>
+        <p>{{book.title}}</p>
+      </tr>
+      <tr>
+        <label class="font-weight-bold">Tác giả: </label>
+        <p>{{book.author}}</p>
+      </tr>
+      <tr>
+        <label class="font-weight-bold">Mô tả: </label>
+        <p>{{book.description}}</p>
+      <tr>
+    </table>
+  </div>
+</div>
